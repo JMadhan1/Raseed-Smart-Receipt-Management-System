@@ -1,106 +1,107 @@
-Raseed - Smart Receipt Manager
-🌐 Live Demo
-Experience Raseed now: https://raseed-842527385575.us-central1.run.app/
+### Raseed - Smart Receipt Manager
 
-📝 Overview
+## 🌐 Live Demo
+**Experience Raseed now:** [https://raseed-842527385575.us-central1.run.app/](https://raseed-842527385575.us-central1.run.app/)
+
+## 📝 Overview
+
 Raseed is an AI-powered receipt management system that helps users digitize, organize, and analyze their receipts. The application uses Google Cloud Vision API for text extraction from receipt images and Gemini AI for intelligent processing and analysis. Users can track their spending patterns, get financial insights, and manage receipts through a user-friendly web interface.
 
-✨ Key Features
-Smart OCR Recognition: Extracts text, amounts, dates, and merchant information from receipt images
+## ✨ Key Features
 
-AI-Powered Analysis: Gemini AI processes receipts and provides spending insights
+- **Smart OCR Recognition**: Extracts text, amounts, dates, and merchant information from receipt images
+- **AI-Powered Analysis**: Gemini AI processes receipts and provides spending insights
+- **Multi-language Support**: English, Telugu (తెలుగు), and Kannada (ಕನ್ನಡ) interfaces
+- **Cloud Storage**: Securely stores receipts in Google Firestore
+- **Spending Analytics**: Visualizes spending patterns and categories
+- **Voice Assistant**: Supports voice queries about spending
+- **Mobile Wallet Integration**: Generates digital wallet passes for receipts
 
-Multi-language Support: English, Telugu (తెలుగు), and Kannada (ಕನ್ನಡ) interfaces
+## 🛠️ Technology Stack
 
-Cloud Storage: Securely stores receipts in Google Firestore
+- **Backend**: Python with Flask
+- **Frontend**: HTML, CSS, JavaScript
+- **Database**: Google Firestore (NoSQL)
+- **AI Services**:
+  - Google Cloud Vision API (OCR)
+  - Google Gemini AI (Natural Language Processing)
+- **Authentication**: Google OAuth 2.0
+- **Hosting**: Google Cloud Run
 
-Spending Analytics: Visualizes spending patterns and categories
+## 🚀 Getting Started
 
-Voice Assistant: Supports voice queries about spending
+### Prerequisites
 
-Mobile Wallet Integration: Generates digital wallet passes for receipts
+- Python 3.9+
+- Google Cloud account with:
+  - Vision API enabled
+  - Firestore database
+  - Gemini API access
+- Google OAuth 2.0 credentials
 
-🛠️ Technology Stack
-Backend: Python with Flask
+### Installation
 
-Frontend: HTML, CSS, JavaScript
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/raseed.git
+   cd raseed
+   ```
 
-Database: Google Firestore (NoSQL)
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-AI Services:
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Google Cloud Vision API (OCR)
+4. Create a `.env` file with your configuration:
+   ```ini
+   FLASK_SECRET_KEY=your-secret-key
+   GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+   GOOGLE_CLIENT_SECRET=your-client-secret
+   GEMINI_API_KEY=your-gemini-api-key
+   REDIRECT_URI=http://localhost:8080/api/auth/google/callback
+   ```
 
-Google Gemini AI (Natural Language Processing)
+5. Run the application:
+   ```bash
+   python app.py
+   ```
 
-Authentication: Google OAuth 2.0
+The application will be available at `http://localhost:8080`.
 
-Hosting: Google Cloud Run
+## 📂 Project Structure
 
-🚀 Getting Started
-Prerequisites
-Python 3.9+
-
-Google Cloud account with:
-
-Vision API enabled
-
-Firestore database
-
-Gemini API access
-
-Google OAuth 2.0 credentials
-
-Installation
-Clone the repository:
-
-bash
-git clone https://github.com/yourusername/raseed.git
-cd raseed
-Create and activate a virtual environment:
-
-bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install dependencies:
-
-bash
-pip install -r requirements.txt
-Create a .env file with your configuration:
-
-ini
-FLASK_SECRET_KEY=your-secret-key
-GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=your-client-secret
-GEMINI_API_KEY=your-gemini-api-key
-REDIRECT_URI=http://localhost:8080/api/auth/google/callback
-Run the application:
-
-bash
-python app.py
-The application will be available at http://localhost:8080.
-
-📂 Project Structure
-text
+```
 raseed/
 ├── app.py                # Main application file
 ├── requirements.txt      # Python dependencies
 ├── .env                  # Environment variables
 ├── static/               # Static assets (CSS, JS, images)
 └── templates/            # HTML templates (embedded in app.py)
-🌍 Multi-language Support
+```
+
+## 🌍 Multi-language Support
+
 Supported languages:
-
-English (en)
-
-Telugu (te)
-
-Kannada (kn)
+- English (en)
+- Telugu (te)
+- Kannada (kn)
 
 Language can be changed via the UI dropdown, which updates the user's preference in Firestore.
 
-📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📜 License
 
-🤝 Contributing
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request.
+
+---
+
+**Note**: The live demo may have limited functionality compared to a fully configured local instance due to API restrictions. For full features, please consider running locally with your own API keys.
