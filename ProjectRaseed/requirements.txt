@@ -1,0 +1,13 @@
+Flask==2.3.3
+Flask-CORS==4.0.0
+google-cloud-vision==3.4.4
+google-cloud-translate==3.12.1
+google-generativeai==0.3.0
+google-cloud-firestore==2.13.1
+google-cloud-storage==2.10.0
+google-auth==2.23.4
+google-auth-oauthlib==1.2.0  # Critical missing dependency
+google-auth-httplib2==0.2.0  # Needed for OAuth flows
+Pillow==10.0.1
+python-dotenv==1.0.0
+gunicorn==21.2.0
